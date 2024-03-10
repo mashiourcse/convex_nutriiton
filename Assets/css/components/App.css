@@ -1,0 +1,41 @@
+
+.Recommendation_System{
+  display: flex;
+  flex-direction: row;
+}
+
+.NutritionInput{
+
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 2vw;
+  flex-wrap: wrap; */
+  background-color: #efefef;
+  margin: 16px;
+  padding: 16px;
+  width: 350px;
+}
+
+.card {
+  background-color: #efefef;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1em;
+  
+}
+
+.scrollable-content {
+  height: 572px;
+  overflow: scroll;
+}
+/* .categoryCard {
+  width: 40%;
+  height: 20rem;
+} */
+.single-item{
+  margin: 20px;
+}
+
