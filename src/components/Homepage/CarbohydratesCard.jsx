@@ -4,7 +4,7 @@ function CarbohydratesCard() {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title"> Carbohydrates</h5>
+                <h5 className="card-title text-center"> Carbohydrates</h5>
                 <p className="card-text">
                     Carbohydrates are your body’s primary source of energy. They are usually found in food as sugars, fibers, and starches, which are processed by the digestive system into glucose which is used to fuel the body.
                 </p>

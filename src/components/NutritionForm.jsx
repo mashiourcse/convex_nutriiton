@@ -35,19 +35,19 @@ const NutritionForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform further actions here, such as sending the form data to an API
     console.log('Form data submitted:', formData);
   };
 
   return (
     <div className='NutritionInput'>
       <h2>Nutrition</h2>
-      <SliderInput label="Proteins(%)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
-      <SliderInput label="Carbs(%)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
-      <SliderInput label="Fats(%)" id="fats" value={formData.fats} onChange={handleInputChange} />
-      <SliderInput label="Vitamins(%)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
-      <SliderInput label="Minerals(%)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
-      <SliderInput label="Water(%)" id="water" value={formData.water} onChange={handleInputChange} />
+      <SliderInput label="Calories" id="calories" value={formData.calories} onChange={handleInputChange} />
+      <SliderInput label="Proteins(g)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
+      <SliderInput label="Carbs(g)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
+      <SliderInput label="Fats(g)" id="fats" value={formData.fats} onChange={handleInputChange} />
+      <SliderInput label="Vitamins(g)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
+      <SliderInput label="Minerals(g)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
+      <SliderInput label="Water(g)" id="water" value={formData.water} onChange={handleInputChange} />
       
       <button type="submit" className='btn btn-success' onClick={handleSubmit}>Submit</button>
     </div>

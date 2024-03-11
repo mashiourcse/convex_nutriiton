@@ -4,7 +4,7 @@ function FatsCard() {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title"> Fats</h5>
+                <h5 className="card-title text-center"> Fats</h5>
                 <p className="card-text">
                     Fats are necessary to sustain a healthy body. Also called lipids or fatty acids, fats exist in a three-molecule structure called triglyceride and can be classified as healthy or unhealthy based on their advantages or risks to the body.
                 </p>

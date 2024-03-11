@@ -4,7 +4,7 @@ function ProteinCard() {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title"> Protein</h5>
+                <h5 className="card-title text-center"> Protein</h5>
                 <p className="card-text">
                     Protein is the most abundant component of the human body; every living cell in the body contains protein. Protein is made up of 20 amino acids, nine of which are not produced in the body and are therefore referred to as essential amino acids. These essential amino acids must be obtained from food.
                 </p>

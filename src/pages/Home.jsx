@@ -11,7 +11,7 @@ import VitaminsCard from '../components/Homepage/VitaminsCard';
 function Home() {
   return (
     <div>
-     
+     <h2 className='text-center'>NUTRITION FACTS</h2>
      <ProteinCard/>
      <CarbohydratesCard/>
      <FatsCard/>

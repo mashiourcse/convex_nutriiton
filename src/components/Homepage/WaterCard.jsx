@@ -4,7 +4,7 @@ function WaterCard() {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title"> Water</h5>
+                <h5 className="card-title text-center"> Water</h5>
                 <p className="card-text">
                     Water is crucial for survival, especially because it accounts for 60% of the human body. Since your body uses water constantly, you must keep replenishing your body with fluids. A few days without water can result in sickness.
                 </p>

@@ -4,7 +4,7 @@ function VitaminsCard() {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title"> Vitamins</h5>
+                <h5 className="card-title text-center"> Vitamins</h5>
                 <p className="card-text">
                     Vitamins are complex chemical molecules that support nearly every function in the body, including the immune system, brain, and neurological system. Many of them help convert food into energy using glucose, fat, and protein in the body. They help regulate body growth and development, produce red blood cells, and protect you against dangerous free radicals.
                 </p>
