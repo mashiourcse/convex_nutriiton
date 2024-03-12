@@ -3,7 +3,7 @@ import NutritionForm from '../components/NutritionForm';
 
 import { SingleFood } from '../components/SingleFood';
 
-const App = () => {
+const RecommendationSystem = () => {
 
 let FoodData = [
   {
@@ -46,8 +46,14 @@ let FoodData = [
       
       <div className='Recommendation_System'>
         <NutritionForm className=''/>
+       
+        <div>
+
+        <h2 className='text-center'>Recommended Food</h2>
         <div className='scrollable-content' >
+        
           <div className='recommend-food'>
+            
            {
             FoodData.map( (singlefoodData, index)=>{
               return <div className='row single-item'>
@@ -57,9 +63,9 @@ let FoodData = [
            }
           </div>
         </div>
-      </div>
+      </div></div>
     </div>
   );
 };
 
-export default App;
+export default RecommendationSystem;

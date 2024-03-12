@@ -12,14 +12,17 @@ let SingleFoodData = {
 export const SingleFood = ({SingleFoodData}) => {
   return (
     <>
-    <Card SingleFoodData={SingleFoodData} className='col-sm-6'/>
+  
+
+    <div className='d-flex'>
+    <Card SingleFoodData={SingleFoodData} className=''/>
               <ChartComponent 
-                className='col-sm-6'
+                className=''
                 labels={SingleFoodData.labels}
                 data={SingleFoodData.data}
                 header={SingleFoodData.header}
               />
-              
+           </div>
               </>
   )
 }

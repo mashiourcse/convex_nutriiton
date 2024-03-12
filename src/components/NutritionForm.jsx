@@ -39,17 +39,23 @@ const NutritionForm = () => {
   };
 
   return (
-    <div className='NutritionInput'>
-      <h2>Nutrition</h2>
-      <SliderInput label="Calories" id="calories" value={formData.calories} onChange={handleInputChange} />
-      <SliderInput label="Proteins(g)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
-      <SliderInput label="Carbs(g)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
-      <SliderInput label="Fats(g)" id="fats" value={formData.fats} onChange={handleInputChange} />
-      <SliderInput label="Vitamins(g)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
-      <SliderInput label="Minerals(g)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
-      <SliderInput label="Water(g)" id="water" value={formData.water} onChange={handleInputChange} />
-      
-      <button type="submit" className='btn btn-success' onClick={handleSubmit}>Submit</button>
+    <div className='card'>
+      <div className='card-header'>
+        <h2>Nutrition</h2>
+      </div>
+      <div className='card-body'>
+        <form>
+          <SliderInput label="Calories" id="calories" value={formData.calories} onChange={handleInputChange} />
+          <SliderInput label="Proteins(g)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
+          <SliderInput label="Carbs(g)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
+          <SliderInput label="Fats(g)" id="fats" value={formData.fats} onChange={handleInputChange} />
+          <SliderInput label="Vitamins(g)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
+          <SliderInput label="Minerals(g)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
+          <SliderInput label="Water(g)" id="water" value={formData.water} onChange={handleInputChange} />
+          
+          <button type="submit" className='btn btn-success' onClick={handleSubmit}>Submit</button>
+        </form>
+      </div>
     </div>
   );
 };
