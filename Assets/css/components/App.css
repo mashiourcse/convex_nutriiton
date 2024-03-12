@@ -27,9 +27,14 @@
   
 }
 
+.food-container{
+  /* background-color: green; */
+  width: 100%;
+}
 .scrollable-content {
-  height: 572px;
-  overflow: scroll;
+  /* height: 572px; */
+  width: 100%;
+ 
 }
 /* .categoryCard {
   width: 40%;
