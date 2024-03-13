@@ -8,8 +8,8 @@ const SliderInput = ({ label, id, value, onChange }) => {
       </div>
       
       <div className="col-sm-7 row">
-        <input type="range" className="col-sm-8 form-control" id={id} value={value} onChange={onChange} min="0" max="100" />
-        <span className="col-sm-3 col-form-label">{value}</span>
+        <input type="number" className="col-sm-8 form-control" id={id} value={value} onChange={onChange} min="0" max="100" />
+        {/* <span className="col-sm-3 col-form-label">{value}</span> */}
       </div>
     </div>
   );

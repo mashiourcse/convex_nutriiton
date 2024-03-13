@@ -4,10 +4,10 @@
   padding: 0;
 }
 
-.nutrition-form{
-  /* background-color: red; */
+.nutrition-form {
   padding-top: 72px;
   margin-top: 15px;
+  
 }
 
 .NutritionInput{
@@ -30,7 +30,7 @@
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1em;
-  
+ 
 }
 
 .food-container{
