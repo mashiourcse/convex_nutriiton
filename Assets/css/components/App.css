@@ -7,7 +7,7 @@
 .nutrition-form {
   padding-top: 72px;
   margin-top: 15px;
-  
+  margin-left: 10px;
 }
 
 .NutritionInput{
@@ -25,19 +25,19 @@
   width: 350px;
 }
 
-.card {
+/* .card {
   background-color: #efefef;
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1em;
  
-}
+} */
 
 .food-container{
   /* background-color: green; */
   width: 100%;
-  padding-top: 70px;
-  margin-top: 15px;
+  padding-top: 10px;
+  margin-top: 86px;
 }
 .scrollable-content {
   /* height: 572px; */
@@ -54,6 +54,11 @@
 
 /* Navbar.css */
 
+.home-section{
+ margin-top: 65px;
+}
 
-
+.about-section{
+  margin-top: 65px;
+}
 /* Add other styles as needed */

@@ -10,7 +10,7 @@ import VitaminsCard from '../components/Homepage/VitaminsCard';
 
 function Home() {
   return (
-    <div>
+    <div className='home-section'>
      <h2 className='text-center'>NUTRITION FACTS</h2>
      <ProteinCard/>
      <CarbohydratesCard/>
