@@ -38,7 +38,8 @@ export const ChartComponent = ({ labels, data,header}) => {
           plugins: {
             title: {
               display: true,
-              text: header || "dummy",
+              // text: header || "dummy",
+              text: "",
               align: "start",
               font: { size: 20 },
               color: "black",
