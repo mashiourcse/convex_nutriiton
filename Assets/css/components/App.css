@@ -1,7 +1,13 @@
 
 .Recommendation_System{
-  display: flex;
-  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.nutrition-form{
+  /* background-color: red; */
+  padding-top: 72px;
+  margin-top: 15px;
 }
 
 .NutritionInput{
@@ -30,6 +36,8 @@
 .food-container{
   /* background-color: green; */
   width: 100%;
+  padding-top: 70px;
+  margin-top: 15px;
 }
 .scrollable-content {
   /* height: 572px; */
@@ -44,3 +52,8 @@
   margin: 20px;
 }
 
+/* Navbar.css */
+
+
+
+/* Add other styles as needed */

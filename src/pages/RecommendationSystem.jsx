@@ -41,11 +41,15 @@ const App = () => {
     },
   ];
   return (
-    <div>
-      
-      <div className="Recommendation_System">
-      <NutritionForm className="position-sticky" />
-        
+    <main className="Recommendation_System">
+    <div class="row ">
+        <div class="col-3" id="sticky-sidebar">
+            <div class="nutrition-form sticky-top">
+                
+      <NutritionForm/>
+            </div>
+        </div>
+        <div class="col" id="main">
         <div className="food-container">
           <h2 className="text-center">Recommended Food</h2>
        
@@ -65,8 +69,9 @@ const App = () => {
           </div>
         
       </div>
-      </div>
+        </div>
     </div>
+    </main>
   );
 };
 

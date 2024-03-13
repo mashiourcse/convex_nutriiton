@@ -10,19 +10,8 @@ body{
     color: #555;
     background-color: #fff;
 }
-.container{
-    height: auto;
-    margin: 15px 15px;
-    width: 683px;
-    padding: 20px;
-    border: 1px solid rgb(200, 191, 191);
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    /* left: 591px; */
-    border-radius: 10px;
-    /* justify-content: center; */
-}
+
+
 .chart{
     max-width: 900px;
     height: 450px;
