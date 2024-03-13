@@ -51,7 +51,7 @@ export const Card = ({ SingleFoodData, index }) => {
                 118 grams):
               </p>
               <div className="row">
-                <div className="col-sm-8">
+                <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-">
                   <ul className="list-group">
                     <li className="list-group-item font-weight-bold">
                       CALORIES: 1345 kcal
@@ -72,7 +72,7 @@ export const Card = ({ SingleFoodData, index }) => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <ChartComponent
                     labels={SingleFoodData.labels}
                     data={SingleFoodData.data}
