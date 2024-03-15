@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Doughnut } from "react-chartjs-2";
-import 'chart.js/auto'; // ADD THIS
-export const ChartComponent = ({ labels, data,header}) => {
+import "chart.js/auto"; // ADD THIS
+export const ChartComponent = ({ labels, data, header }) => {
   console.log(labels);
   console.log(data);
   const [chartData, setChartData] = useState({

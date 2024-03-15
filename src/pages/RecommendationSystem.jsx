@@ -4,7 +4,11 @@ import NutritionForm from "../components/NutritionForm";
 import { SingleFood } from "../components/SingleFood";
 import { Card } from "../components/Card";
 
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
+
 const App = () => {
+  /*
   let FoodData = [
     {
       header: "Nutrient2",
@@ -40,38 +44,34 @@ const App = () => {
       data: [20, 30, 10, 3, 1, 0],
     },
   ];
+  */
+
+  let FoodData = useQuery(api.brandedFoods.get);
+
   return (
-   
-    <div class="row Recommendation_System">
-        <div class="col-12 col-xl-3 col-lg-3 col-md-12" id="sticky-sidebar">
-            <div class="nutrition-form sticky-top">
-                
-      <NutritionForm/>
-            </div>
+    <div className="row Recommendation_System">
+      <div className="col-12 col-xl-3 col-lg-3 col-md-12" id="sticky-sidebar">
+        <div className="nutrition-form sticky-top">
+          <NutritionForm />
         </div>
-        <div class="col-12 col-xl-9 col-lg-9 col-md-12" id="main">
+      </div>
+      <div className="col-12 col-xl-9 col-lg-9 col-md-12" id="main">
         <div className="card food-container">
           <h2 className="text-center">Recommended Food</h2>
-       
-        
+
           <div className="recommend-food">
-            {FoodData.map((singlefoodData, index) => {
+            {FoodData?.map((singlefoodData, index) => {
+              console.log("singlefoodData:", singlefoodData);
               return (
-                <div className="single-item">
-                  <Card
-                    SingleFoodData={singlefoodData}
-                    index={index}
-                    key={index}
-                  />
+                <div className="single-item" key={index}>
+                  <Card SingleFoodData={singlefoodData} index={index} />
                 </div>
               );
             })}
           </div>
-        
-      </div>
         </div>
+      </div>
     </div>
-    
   );
 };
 
