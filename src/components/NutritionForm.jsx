@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SliderInput = ({ label, id, value, onChange }) => {
+const Input = ({ label, id, value, onChange }) => {
   return (
     <div className="form-group row">
       <div className="col-sm-5 col-form-label">
@@ -45,13 +45,13 @@ const NutritionForm = () => {
       </div>
       <div className='card-body'>
         <form>
-          <SliderInput label="Calories" id="calories" value={formData.calories} onChange={handleInputChange} />
-          <SliderInput label="Proteins(g)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
-          <SliderInput label="Carbs(g)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
-          <SliderInput label="Fats(g)" id="fats" value={formData.fats} onChange={handleInputChange} />
-          <SliderInput label="Vitamins(g)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
-          <SliderInput label="Minerals(g)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
-          <SliderInput label="Water(g)" id="water" value={formData.water} onChange={handleInputChange} />
+          <Input label="Calories" id="calories" value={formData.calories} onChange={handleInputChange} />
+          <Input label="Proteins(g)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
+          <Input label="Carbs(g)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
+          <Input label="Fats(g)" id="fats" value={formData.fats} onChange={handleInputChange} />
+          <Input label="Vitamins(g)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
+          <Input label="Minerals(g)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
+          <Input label="Water(g)" id="water" value={formData.water} onChange={handleInputChange} />
           
           <button type="submit" className='btn btn-success' onClick={handleSubmit}>Submit</button>
         </form>

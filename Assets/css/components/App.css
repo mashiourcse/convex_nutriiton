@@ -60,5 +60,15 @@
 
 .about-section{
   margin-top: 65px;
+  margin-left: 12%;
+}
+
+.profile{
+  margin: 2px;
 }
 /* Add other styles as needed */
+
+.card-img-top{
+  padding: 20px;
+  border-radius: 50%;
+}
