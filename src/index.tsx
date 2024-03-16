@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+
 
 import { ConvexProvider, ConvexReactClient } from "convex/react";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "../Router/router";
 
 const convex = new ConvexReactClient("https://cautious-ox-174.convex.cloud");
 
