@@ -6,6 +6,7 @@ import { Card } from "../components/Card";
 
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
+import { useNutritionContext } from "../../Context/NutritionContext";
 
 const App = () => {
   /*
@@ -45,6 +46,8 @@ const App = () => {
     },
   ];
   */
+  const { inputData } = useNutritionContext();
+  console.log(inputData);
 
   let FoodData = useQuery(api.brandedFoods.get);
 

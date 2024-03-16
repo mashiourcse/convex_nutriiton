@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useNutritionContext } from "../../Context/NutritionContext";
 
 const Input = ({ label, id, value, onChange }) => {
   return (
@@ -6,9 +7,17 @@ const Input = ({ label, id, value, onChange }) => {
       <div className="col-sm-5 col-form-label">
         <label htmlFor={id}>{label}</label>
       </div>
-      
+
       <div className="col-sm-7 row">
-        <input type="number" className="col-sm-8 form-control" id={id} value={value} onChange={onChange} min="0" max="100" />
+        <input
+          type="number"
+          className="col-sm-8 form-control"
+          id={id}
+          value={value}
+          onChange={onChange}
+          min="0"
+          max="100"
+        />
         {/* <span className="col-sm-3 col-form-label">{value}</span> */}
       </div>
     </div>
@@ -16,44 +25,90 @@ const Input = ({ label, id, value, onChange }) => {
 };
 
 const NutritionForm = () => {
+  const { inputData, setinputData } = useNutritionContext();
+
+  console.log(inputData);
+
   const [formData, setFormData] = useState({
-    proteins: '',
-    carbs: '',
-    fats: '',
-    vitamins: '',
-    minerals: '',
-    water: ''
+    proteins: "",
+    carbs: "",
+    fats: "",
+    vitamins: "",
+    minerals: "",
+    water: "",
   });
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [id]: value
+      [id]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
+    setinputData(formData);
+    console.log("Form data submitted:", formData);
   };
 
   return (
-    <div className='card'>
-      <div className='card-header'>
+    <div className="card">
+      <div className="card-header">
         <h2>Nutrition</h2>
       </div>
-      <div className='card-body'>
+      <div className="card-body">
         <form>
-          <Input label="Calories" id="calories" value={formData.calories} onChange={handleInputChange} />
-          <Input label="Proteins(g)" id="proteins" value={formData.proteins} onChange={handleInputChange} />
-          <Input label="Carbs(g)" id="carbs" value={formData.carbs} onChange={handleInputChange} />
-          <Input label="Fats(g)" id="fats" value={formData.fats} onChange={handleInputChange} />
-          <Input label="Vitamins(g)" id="vitamins" value={formData.vitamins} onChange={handleInputChange} />
-          <Input label="Minerals(g)" id="minerals" value={formData.minerals} onChange={handleInputChange} />
-          <Input label="Water(g)" id="water" value={formData.water} onChange={handleInputChange} />
-          
-          <button type="submit" className='btn btn-success' onClick={handleSubmit}>Submit</button>
+          <Input
+            label="Calories"
+            id="calories"
+            value={formData.calories}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="Proteins(g)"
+            id="proteins"
+            value={formData.proteins}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="Carbs(g)"
+            id="carbs"
+            value={formData.carbs}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="Fats(g)"
+            id="fats"
+            value={formData.fats}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="Vitamins(g)"
+            id="vitamins"
+            value={formData.vitamins}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="Minerals(g)"
+            id="minerals"
+            value={formData.minerals}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="Water(g)"
+            id="water"
+            value={formData.water}
+            onChange={handleInputChange}
+          />
+
+          <button
+            type="submit"
+            className="btn btn-success"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
