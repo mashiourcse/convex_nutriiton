@@ -47,7 +47,7 @@ const App = () => {
   ];
   */
   const { inputData } = useNutritionContext();
-  console.log(inputData);
+  console.log("inputData: ", inputData);
 
   let FoodData = useQuery(api.brandedFoods.get);
 
@@ -64,7 +64,6 @@ const App = () => {
 
           <div className="recommend-food">
             {FoodData?.map((singlefoodData, index) => {
-              console.log("singlefoodData:", singlefoodData);
               return (
                 <div className="single-item" key={index}>
                   <Card SingleFoodData={singlefoodData} index={index} />
