@@ -12,7 +12,7 @@ const App = () => {
   const { inputData } = useNutritionContext();
   console.log("inputData: ", inputData);
 
-  let FoodData = useQuery(api.brandedFoods.get, { inputData });
+  let FoodData = useQuery(api.brandedFoods.get, { inputData: inputData });
   // console.log("FoodData: ", FoodData);
   // console.log("length of FoodData: ", Object.keys(FoodData).length);
 
