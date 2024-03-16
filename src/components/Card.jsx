@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import { ChartComponent } from "./ChartComponent";
 
 export const Card = ({ SingleFoodData, index }) => {
-  const accordionId = `accordion-${index}`; 
+  const accordionId = `accordion-${index}`;
   const [arrow, setArrow] = useState(true);
-  let arrelement = (arrow)? <i className="fa fa-arrow-down" aria-hidden="true" ></i> : <i className="fa fa-arrow-up" aria-hidden="true"></i>;
+  let arrelement = arrow ? (
+    <i className="fa fa-arrow-down" aria-hidden="true"></i>
+  ) : (
+    <i className="fa fa-arrow-up" aria-hidden="true"></i>
+  );
   let changeArrow = () => {
     setArrow(!arrow);
-    
-  }
- 
+  };
+
   return (
     <div id={accordionId} className="accordion">
       <div className="card">
@@ -27,13 +30,7 @@ export const Card = ({ SingleFoodData, index }) => {
               aria-expanded="true"
               aria-controls={`collapse${index}`}
             >
-              {
-                arrelement
-              }
-              
-
-
-
+              {arrelement}
             </button>
           </h2>
         </div>
