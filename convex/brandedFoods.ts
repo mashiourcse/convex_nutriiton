@@ -18,6 +18,6 @@ export const get = query({
     return await ctx.db
       .query("brandedFoods")
       .filter((q) => q.gte(q.field("protein"), p))
-      .take(7);
+      .take(25);
   },
 });
