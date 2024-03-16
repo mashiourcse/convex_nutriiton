@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ChartComponent } from "./ChartComponent";
 
 export const Card = ({ SingleFoodData, index }) => {
+  const [labels, setLabels] = useState([]);
+  const [data, setData] = useState([]);
+  const [chartRender, setChartRender] = useState(false);
   const accordionId = `accordion-${index}`;
   const [arrow, setArrow] = useState(true);
   let arrelement = arrow ? (
@@ -13,6 +16,27 @@ export const Card = ({ SingleFoodData, index }) => {
     setArrow(!arrow);
   };
 
+  function filterNutritionValue(obj) {
+    const skippedProperties = ['_creationTime', '_id', 'brandOwner', 'calories', 'brandedFoodCategory', 'description', 'name', 'servingSize', 'servingSizeUnit'];  
+    let labels = [];
+    let data = [];
+  
+    for (const [key, value] of Object.entries(obj)) {
+      if (!skippedProperties.includes(key)) {
+       // console.log(`${key}: ${value}`);
+        labels.push(key);
+        data.push(value);
+      }
+    }
+   setLabels(labels);
+   setData(data);
+  }
+
+  useEffect(()=>{
+    filterNutritionValue(SingleFoodData);
+    setChartRender(true);
+  },[])
+  console.log(SingleFoodData);
   return (
     <div id={accordionId} className="accordion">
       <div className="card">
@@ -44,18 +68,25 @@ export const Card = ({ SingleFoodData, index }) => {
           <div className="card-body">
             <div className="nutrition-data">
               <p className="card-text">
-                Here are the nutrition facts for 1 medium-sized banana (about
-                118 grams):
+                {/* Here are the nutrition facts for 1 medium-sized banana (about
+                118 grams): */}
+                {SingleFoodData?.brandOwner} {" "} {SingleFoodData?.brandedFoodCategory}
               </p>
               <div className="row">
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-">
                   <ul className="list-group">
                     <li className="list-group-item font-weight-bold">
-                      CALORIES: 1345 kcal
+                      {"CALORIES: "} {SingleFoodData.calories} {"kcal"}
                     </li>
-                    <li className="list-group-item">Total Fat: 0.4g</li>
-                    <li className="list-group-item">Saturated Fat: 0.1g</li>
-                    <li className="list-group-item">Cholesterol: 0mg</li>
+                    {
+                      labels.map( (name, index)=>{
+                        return <li className="list-group-item">{name}: {data[index]}</li>
+                      })
+                    }
+                    
+                    {/* <li className="list-group-item">Saturated Fat: 0.1g</li>
+                   <li className="list-group-item">Total Fat: 0.4g</li>
+                   <li className="list-group-item">Cholesterol: 0mg</li>
                     <li className="list-group-item">Sodium: 1mg</li>
                     <li className="list-group-item">Total Carbohydrate: 27g</li>
                     <li className="list-group-item">Dietary Fiber: 3.1g</li>
@@ -66,15 +97,17 @@ export const Card = ({ SingleFoodData, index }) => {
                     </li>
                     <li className="list-group-item">
                       Potassium: 422mg (9% DV)
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                  <ChartComponent
-                    labels={SingleFoodData.labels}
-                    data={SingleFoodData.data}
-                    header={SingleFoodData.header}
-                  />
+                {
+                  chartRender && <ChartComponent
+                  labels={labels}
+                  data={data}
+                  
+                />
+                }  
                 </div>
                 {/* <div className="col-sm-4"></div> */}
               </div>
