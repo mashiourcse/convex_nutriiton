@@ -44,7 +44,7 @@ export const Card = ({ SingleFoodData, index }) => {
           className="card-header d-flex justify-content-between"
           id={`heading${index}`}
         >
-          <h2>{SingleFoodData?.description}</h2>
+          <h2>{"#"} {index+1} {" "} {SingleFoodData?.brandOwner} {" "} {SingleFoodData?.brandedFoodCategory}</h2>
           <h2 className="mb-0 ">
             <button
               onClick={changeArrow}
@@ -70,7 +70,8 @@ export const Card = ({ SingleFoodData, index }) => {
               <p className="card-text">
                 {/* Here are the nutrition facts for 1 medium-sized banana (about
                 118 grams): */}
-                {SingleFoodData?.brandOwner} {" "} {SingleFoodData?.brandedFoodCategory}
+                {SingleFoodData?.description} {" "}  
+                {" | Serving size: "}{SingleFoodData?.servingSize} {" | Serving Unit: "} {SingleFoodData?.servingSizeUnit}
               </p>
               <div className="row">
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-">
