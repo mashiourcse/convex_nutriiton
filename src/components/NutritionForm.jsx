@@ -27,15 +27,20 @@ const Input = ({ label, id, value, onChange }) => {
 const NutritionForm = () => {
   const { inputData, setinputData } = useNutritionContext();
 
-  console.log(inputData);
+ // console.log(inputData);
 
   const [formData, setFormData] = useState({
-    proteins: "",
-    carbs: "",
-    fats: "",
-    vitamins: "",
-    minerals: "",
-    water: "",
+    calories: "",
+    protein: "",
+    carbohydrates: "",
+    cholesterol: "",
+    fat: "",
+    fiber: "",
+    iron: "",
+    calcium: "",
+    sodium: "",
+    sugars: "",
+
   });
 
   const handleInputChange = (e) => {
@@ -66,39 +71,58 @@ const NutritionForm = () => {
             onChange={handleInputChange}
           />
           <Input
-            label="Proteins(g)"
-            id="proteins"
-            value={formData.proteins}
+            label="protein(g)"
+            id="protein"
+            value={formData.protein}
             onChange={handleInputChange}
           />
           <Input
-            label="Carbs(g)"
-            id="carbs"
-            value={formData.carbs}
+            label="carbohydrates(g)"
+            id="carbohydrates"
+            value={formData.carbohydrates}
             onChange={handleInputChange}
           />
           <Input
-            label="Fats(g)"
-            id="fats"
-            value={formData.fats}
+            label="cholesterol(g)"
+            id="cholesterol"
+            value={formData.cholesterol}
             onChange={handleInputChange}
           />
           <Input
-            label="Vitamins(g)"
-            id="vitamins"
-            value={formData.vitamins}
+            label="fat(g)"
+            id="fat"
+            value={formData.fat}
             onChange={handleInputChange}
           />
           <Input
-            label="Minerals(g)"
-            id="minerals"
-            value={formData.minerals}
+            label="fiber(g)"
+            id="fiber"
+            value={formData.fiber}
             onChange={handleInputChange}
           />
           <Input
-            label="Water(g)"
-            id="water"
-            value={formData.water}
+            label="iron(g)"
+            id="iron"
+            value={formData.iron}
+            onChange={handleInputChange}
+          />
+
+          <Input
+            label="calcium(g)"
+            id="calcium"
+            value={formData.calcium}
+            onChange={handleInputChange}
+          />
+           <Input
+            label="sodium(g)"
+            id="sodium"
+            value={formData.sodium}
+            onChange={handleInputChange}
+          />
+           <Input
+            label="sugars(g)"
+            id="sugars"
+            value={formData.sugars}
             onChange={handleInputChange}
           />
 
