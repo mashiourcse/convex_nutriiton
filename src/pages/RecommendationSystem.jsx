@@ -9,8 +9,8 @@ import { useNutritionContext } from "../../Context/NutritionContext";
 const App = () => {
   const { inputData } = useNutritionContext();
 
-  const [startIndex, setStartIndex] = useState(0);
-  const [endIndex, setEndIndex] = useState(5);
+  const [startIndex, setStartIndex] = useState(1);
+  const [endIndex, setEndIndex] = useState(6);
   const [startInput, setStartInput] = useState("1");
   const [endInput, setEndInput] = useState("5");
 
@@ -37,6 +37,7 @@ const App = () => {
           <h2 className="text-center btn btn-info" >Recommended Food</h2>
           <div className="recommend-food">
             <div className="filter-inputs text-center">
+              <span className="btn btn-info m-2">Total {FoodData?.length} items</span>
               <input type="number" className="btn btn-info" style={{width: "105px"}} value={startInput} onChange={(e) => setStartInput(e.target.value)}  />
               <input type="number" className="btn btn-info m-2" style={{width: "105px",}} value={endInput} onChange={(e) => setEndInput(e.target.value)}  />
               <button onClick={handleFilter}  className="btn btn-success">Filter</button>

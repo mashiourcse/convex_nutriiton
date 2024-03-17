@@ -59,8 +59,8 @@ const NutritionForm = () => {
 
   return (
     <div className="card">
-      <div className="card-header">
-        <h2>Nutrition</h2>
+      <div className="card-header" style={{backgroundColor: "#138496", color: "white"}}>
+        <h2 className="text-center" >Nutrition</h2>
       </div>
       <div className="card-body">
         <form>
