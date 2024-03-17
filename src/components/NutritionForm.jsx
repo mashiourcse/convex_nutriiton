@@ -27,7 +27,7 @@ const Input = ({ label, id, value, onChange }) => {
 const NutritionForm = () => {
   const { inputData, setinputData } = useNutritionContext();
 
- // console.log(inputData);
+  // console.log(inputData);
 
   const [formData, setFormData] = useState({
     calories: "",
@@ -40,7 +40,6 @@ const NutritionForm = () => {
     calcium: "",
     sodium: "",
     sugars: "",
-
   });
 
   const handleInputChange = (e) => {
@@ -113,13 +112,13 @@ const NutritionForm = () => {
             value={formData.calcium}
             onChange={handleInputChange}
           />
-           <Input
+          <Input
             label="sodium(g)"
             id="sodium"
             value={formData.sodium}
             onChange={handleInputChange}
           />
-           <Input
+          <Input
             label="sugars(g)"
             id="sugars"
             value={formData.sugars}
