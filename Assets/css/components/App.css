@@ -62,11 +62,11 @@
 }
 
 .about-section{
-  margin-top: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  /* margin: auto; */
-  width: 86%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile{
