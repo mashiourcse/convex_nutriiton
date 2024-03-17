@@ -4,12 +4,16 @@ const NutritionContext = createContext();
 
 export const NutritionProvider = ({ children }) => {
   const [inputData, setinputData] = useState({
-    proteins: "",
-    carbs: "",
-    fats: "",
-    vitamins: "",
-    minerals: "",
-    water: "",
+    calories: "",
+    protein: "",
+    carbohydrates: "",
+    cholesterol: "",
+    fat: "",
+    fiber: "",
+    iron: "",
+    calcium: "",
+    sodium: "",
+    sugars: "",
   });
 
   return (

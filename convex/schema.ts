@@ -21,5 +21,5 @@ export default defineSchema({
     servingSizeUnit: v.string(),
     sodium: v.float64(),
     sugars: v.float64(),
-  }),
+  }).index("by_brandOwner", ["brandOwner"]),
 });
