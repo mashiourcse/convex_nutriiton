@@ -11,15 +11,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary fixed-top'>
+    <nav className='navbar navbar-expand-lg bg-body-tertiary fixed-top' style={{backgroundColor: "#9df5c6", color: "black"}}>
       <div className='container-fluid'>
-        <Link className='navbar-brand' to={"/"}>
+        <Link className='font-weight-bold navbar-brand' to={"/"} style={{color: "black"}}>
           Convex
         </Link>
         <button
-          className='navbar-toggler'
+          className='font-weight-bold navbar-toggler font-weight-bold'
           type='button'
           onClick={() => setNavbarCollapsed(!navbarCollapsed)}
+          style={{color: "black"}}
         >
           <span className='navbar-toggler-icon'></span>
         </button>
@@ -35,9 +36,10 @@ const Navbar = () => {
             >
               {/* <Link to={"/"}>Home</Link> */}
               <Link
-                className='nav-link'
+                className='font-weight-bold nav-link'
                 to={"/"}
                 onClick={() => handleNavItemClick("home")}
+                style={{color: "black"}}
               >
                 Home
               </Link>
@@ -48,9 +50,10 @@ const Navbar = () => {
               }`}
             >
               <Link
-                className='nav-link'
+                className='font-weight-bold nav-link'
                 to={"/recommendation-system"}
                 onClick={() => handleNavItemClick("recommendation-system")}
+                style={{color: "black"}}
               >
                 Recommendation System
               </Link>
@@ -61,9 +64,10 @@ const Navbar = () => {
               }`}
             >
               <Link
-                className='nav-link'
+                className='font-weight-bold nav-link'
                 to={"/about"}
                 onClick={() => handleNavItemClick("about")}
+                style={{color: "black"}}
               >
                 About Us
               </Link>

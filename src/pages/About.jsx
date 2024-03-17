@@ -72,7 +72,7 @@ function About() {
     <div className='about-section row '>
 
       {
-        profileData.map( (data)=> <ProfileCard3 data={data} className="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12"/>)
+        profileData.map( (data,index)=> <ProfileCard3 key={index} index = {index} data={data} className="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12"/>)
       }
       
       
