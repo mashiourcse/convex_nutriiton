@@ -13,7 +13,7 @@ const ProfileCard3 = ({data,index}) => {
       <div className="card-body">
         <div className='name-link'>
             <div>
-            <h5 className="card-title text-center">{data.name}</h5>        
+            <h4 className="card-title text-center font-weight-bold">{data.name}</h4>        
             </div>
             <div>
             <h5 className="card-title text-center">
