@@ -7,7 +7,7 @@ function MineralsCard() {
       style={{ backgroundColor: "purple" }}
     >
       <div className="card-body">
-        <h5 className="card-title text-center">Minerals</h5>
+        <h5 className="card-title text-center" style={{fontSize: "30px"}}>Minerals</h5>
         <p className="card-text">
           Minerals are inorganic substances that retain their chemical structure
           and are more stable. However, other factors, such as soil depletion,

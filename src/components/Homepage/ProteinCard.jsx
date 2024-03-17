@@ -14,7 +14,7 @@ function ProteinCard() {
       style={{ backgroundColor: "chocolate" }}
     >
       <div className="card-body">
-        <h5 className="card-title text-center"> Protein</h5>
+        <h5 className="card-title text-center" style={{fontSize: "30px"}}> Protein</h5>
         <article className="card-text animate">
           Protein is the most abundant component of the human body; every living
           cell in the body contains protein. Protein is made up of 20 amino

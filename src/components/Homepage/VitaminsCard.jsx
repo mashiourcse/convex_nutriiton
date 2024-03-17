@@ -7,7 +7,7 @@ function VitaminsCard() {
       style={{ backgroundColor: "coral" }}
     >
       <div className="card-body">
-        <h5 className="card-title text-center"> Vitamins</h5>
+        <h5 className="card-title text-center" style={{fontSize: "30px"}}> Vitamins</h5>
         <p className="card-text">
           Vitamins are complex chemical molecules that support nearly every
           function in the body, including the immune system, brain, and

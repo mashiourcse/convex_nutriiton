@@ -4,7 +4,7 @@ function FatsCard() {
   return (
     <div className="card facts-card " style={{ backgroundColor: "#fff147" }}>
       <div className="card-body">
-        <h5 className="card-title text-center"> Fats</h5>
+        <h5 className="card-title text-center" style={{fontSize: "30px"}}> Fats</h5>
         <p className="card-text">
           Fats are necessary to sustain a healthy body. Also called lipids or
           fatty acids, fats exist in a three-molecule structure called

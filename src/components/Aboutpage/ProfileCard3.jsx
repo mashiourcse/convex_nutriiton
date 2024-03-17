@@ -5,7 +5,7 @@ import { AccordionSection } from './AccordionSection';
 const ProfileCard3 = ({data,index}) => {
 
   let borderColor = [
-    "red", "blue", "purple", "orange"
+    "red", "purple", "blue", "orange"
   ]
   return (
     <div className="card profile" style={{ width: '20rem', border: `10px solid ${borderColor[index]}`, margin: "10px"}}>

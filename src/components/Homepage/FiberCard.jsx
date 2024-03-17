@@ -7,13 +7,13 @@ function FiberCard() {
       style={{ backgroundColor: "darkgreen" }}
     >
       <div className="card-body">
-        <h5 className="card-title text-center"> Fiber</h5>
+        <h5 className="card-title text-center" style={{fontSize: "30px"}}> Fiber</h5>
         <p className="card-text">
           Plants that contain fiber include fruits, vegetables, and grains.
           Fiber is divided into two types; both of which are required for good
           health:
         </p>
-        <h6 className="card-subtitle mb-2 text-muted">Types of Fiber:</h6>
+        <h6 className="card-subtitle mb-2 ">Types of Fiber:</h6>
         <p className="card-text">
           <strong>Soluble fiber:</strong>
           <br />
