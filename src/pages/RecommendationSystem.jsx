@@ -1,20 +1,29 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import NutritionForm from "../components/NutritionForm";
-
 import { SingleFood } from "../components/SingleFood";
 import { Card } from "../components/Card";
-
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useNutritionContext } from "../../Context/NutritionContext";
 
 const App = () => {
   const { inputData } = useNutritionContext();
-  console.log("inputData: ", inputData);
+
+  const [startIndex, setStartIndex] = useState(0);
+  const [endIndex, setEndIndex] = useState(5);
+  const [startInput, setStartInput] = useState("");
+  const [endInput, setEndInput] = useState("");
 
   let FoodData = useQuery(api.brandedFoods.get, { inputData: inputData });
-  // console.log("FoodData: ", FoodData);
-  // console.log("length of FoodData: ", Object.keys(FoodData).length);
+
+  const filterByIndexRange = () => FoodData?.filter((_, index) => index >= startIndex-1 && index < endIndex);
+
+  const handleFilter = () => {
+    if (startInput !== "" && endInput !== "") {
+      setStartIndex(parseInt(startInput));
+      setEndIndex(parseInt(endInput));
+    }
+  };
 
   return (
     <div className="row Recommendation_System">
@@ -25,14 +34,17 @@ const App = () => {
       </div>
       <div className="col-12 col-xl-9 col-lg-9 col-md-12" id="main">
         <div className="card food-container">
-          <h2 className="text-center">Recommended Food</h2>
-
+          <h2 className="text-center btn btn-info" >Recommended Food</h2>
           <div className="recommend-food">
-            {FoodData?.map((singlefoodData, index) => {
-              // console.log("here!!!");
+            <div className="filter-inputs text-center">
+              <input type="number" className="btn btn-info" style={{width: "105px"}} value={startInput} onChange={(e) => setStartInput(e.target.value)} placeholder="Start index" />
+              <input type="number" className="btn btn-info m-2" style={{width: "105px"}} value={endInput} onChange={(e) => setEndInput(e.target.value)} placeholder="End index" />
+              <button onClick={handleFilter}  className="btn btn-success">Filter</button>
+            </div>
+            {filterByIndexRange()?.map((singlefoodData, index) => {
               return (
                 <div className="single-item" key={index}>
-                  <Card SingleFoodData={singlefoodData} index={index} />
+                  <Card SingleFoodData={singlefoodData} index={index+startIndex-1} />
                 </div>
               );
             })}

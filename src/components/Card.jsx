@@ -51,8 +51,9 @@ export const Card = ({ SingleFoodData, index }) => {
     <div id={accordionId} className="accordion">
       <div className="card">
         <div
-          className="card-header d-flex justify-content-between"
+          className="card-header d-flex justify-content-between  btn btn-info"
           id={`heading${index}`}
+          style={{backgroundColor: "#138496"}}
         >
           <h2>
             {"#"} {index + 1} {SingleFoodData?.brandOwner}{" "}
@@ -66,6 +67,7 @@ export const Card = ({ SingleFoodData, index }) => {
               data-target={`#collapse${index}`}
               aria-expanded="true"
               aria-controls={`collapse${index}`}
+              style={{backgroundColor: "white"}}
             >
               {arrelement}
             </button>
