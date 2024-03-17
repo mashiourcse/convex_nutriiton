@@ -16,7 +16,8 @@ const App = () => {
 
   let FoodData = useQuery(api.brandedFoods.get, { inputData: inputData });
 
-  const filterByIndexRange = () => FoodData?.filter((_, index) => index >= startIndex-1 && index < endIndex);
+  const filterByIndexRange = () =>
+    FoodData?.filter((_, index) => index >= startIndex - 1 && index < endIndex);
 
   const handleFilter = () => {
     if (startInput !== "" && endInput !== "") {
@@ -34,18 +35,23 @@ const App = () => {
       </div>
       <div className="col-12 col-xl-9 col-lg-9 col-md-12" id="main">
         <div className="card food-container">
-          <h2 className="text-center btn btn-info" >Recommended Food</h2>
+          <h2 className="text-center btn btn-info">Recommended Food</h2>
           <div className="recommend-food">
             <div className="filter-inputs text-center">
+
               <span className="btn btn-info m-2">Total {FoodData?.length} items</span>
               <input type="number" className="btn btn-info" style={{width: "105px"}} value={startInput} onChange={(e) => setStartInput(e.target.value)}  />
               <input type="number" className="btn btn-info m-2" style={{width: "105px",}} value={endInput} onChange={(e) => setEndInput(e.target.value)}  />
               <button onClick={handleFilter}  className="btn btn-success">Filter</button>
+
             </div>
             {filterByIndexRange()?.map((singlefoodData, index) => {
               return (
                 <div className="single-item" key={index}>
-                  <Card SingleFoodData={singlefoodData} index={index+startIndex-1} />
+                  <Card
+                    SingleFoodData={singlefoodData}
+                    index={index + startIndex - 1}
+                  />
                 </div>
               );
             })}

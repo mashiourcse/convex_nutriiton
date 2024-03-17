@@ -14,7 +14,6 @@ export const NutritionProvider = ({ children }) => {
     calcium: "",
     sodium: "",
     sugars: "",
-
   });
 
   return (

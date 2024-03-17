@@ -30,6 +30,7 @@ const NutritionForm = () => {
   // console.log(inputData);
 
   const [formData, setFormData] = useState({
+
     calories: "0",
     protein: "0",
     carbohydrates: "0",
@@ -40,6 +41,7 @@ const NutritionForm = () => {
     calcium: "0",
     sodium: "0",
     sugars: "0",
+
   });
 
   const handleInputChange = (e) => {
