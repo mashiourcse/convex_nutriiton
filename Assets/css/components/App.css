@@ -63,8 +63,10 @@
 
 .about-section{
   margin-top: 65px;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: auto; */
+  width: 86%;
 }
 
 .profile{
