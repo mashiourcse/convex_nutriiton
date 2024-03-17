@@ -4,11 +4,11 @@ import { useNutritionContext } from "../../Context/NutritionContext";
 const Input = ({ label, id, value, onChange }) => {
   return (
     <div className="form-group row">
-      <div className="col-sm-5 col-form-label">
+      <div className="col-sm-6 col-form-label">
         <label htmlFor={id}>{label}</label>
       </div>
 
-      <div className="col-sm-7 row">
+      <div className="col-sm-6 row">
         <input
           type="number"
           className="col-sm-8 form-control"
@@ -27,20 +27,19 @@ const Input = ({ label, id, value, onChange }) => {
 const NutritionForm = () => {
   const { inputData, setinputData } = useNutritionContext();
 
- // console.log(inputData);
+  // console.log(inputData);
 
   const [formData, setFormData] = useState({
-    calories: "",
-    protein: "",
-    carbohydrates: "",
-    cholesterol: "",
-    fat: "",
-    fiber: "",
-    iron: "",
-    calcium: "",
-    sodium: "",
-    sugars: "",
-
+    calories: "0",
+    protein: "0",
+    carbohydrates: "0",
+    cholesterol: "0",
+    fat: "0",
+    fiber: "0",
+    iron: "0",
+    calcium: "0",
+    sodium: "0",
+    sugars: "0",
   });
 
   const handleInputChange = (e) => {
@@ -59,8 +58,11 @@ const NutritionForm = () => {
 
   return (
     <div className="card">
-      <div className="card-header" style={{backgroundColor: "#138496", color: "white"}}>
-        <h2 className="text-center" >Nutrition</h2>
+      <div
+        className="card-header"
+        style={{ backgroundColor: "#138496", color: "white" }}
+      >
+        <h2 className="text-center">Nutrition</h2>
       </div>
       <div className="card-body">
         <form>
@@ -113,13 +115,13 @@ const NutritionForm = () => {
             value={formData.calcium}
             onChange={handleInputChange}
           />
-           <Input
+          <Input
             label="sodium(g)"
             id="sodium"
             value={formData.sodium}
             onChange={handleInputChange}
           />
-           <Input
+          <Input
             label="sugars(g)"
             id="sugars"
             value={formData.sugars}

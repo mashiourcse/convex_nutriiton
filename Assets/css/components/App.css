@@ -50,8 +50,11 @@
 } */
 .single-item{
   margin: 20px;
+  transition: transform 0.2s ease;
 }
-
+.single-item:hover {
+    transform: scale(1.02);
+}
 /* Navbar.css */
 
 .home-section{
@@ -60,7 +63,8 @@
 
 .about-section{
   margin-top: 65px;
-  margin-left: 12%;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .profile{
@@ -71,4 +75,15 @@
 .card-img-top{
   padding: 20px;
   border-radius: 50%;
+}
+
+.facts-card{
+
+margin: 40px 40px;
+
+/* width: 586px; */
+
+padding: 20px 20px;
+
+border-radius: 50px;
 }
