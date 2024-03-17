@@ -71,57 +71,57 @@ const NutritionForm = () => {
             onChange={handleInputChange}
           />
           <Input
-            label="Proteins(g)"
-            id="proteins"
+            label="protein(g)"
+            id="protein"
             value={formData.protein}
             onChange={handleInputChange}
           />
           <Input
-            label="Carbs(g)"
-            id="carbs"
+            label="carbohydrates(g)"
+            id="carbohydrates"
             value={formData.carbohydrates}
             onChange={handleInputChange}
           />
           <Input
-            label="Fats(g)"
-            id="fats"
+            label="cholesterol(g)"
+            id="cholesterol"
             value={formData.cholesterol}
             onChange={handleInputChange}
           />
           <Input
-            label="Vitamins(g)"
-            id="vitamins"
+            label="fat(g)"
+            id="fat"
             value={formData.fat}
             onChange={handleInputChange}
           />
           <Input
-            label="Minerals(g)"
-            id="minerals"
+            label="fiber(g)"
+            id="fiber"
             value={formData.fiber}
             onChange={handleInputChange}
           />
           <Input
-            label="Water(g)"
-            id="water"
+            label="iron(g)"
+            id="iron"
             value={formData.iron}
             onChange={handleInputChange}
           />
 
           <Input
-            label="Water(g)"
-            id="water"
+            label="calcium(g)"
+            id="calcium"
             value={formData.calcium}
             onChange={handleInputChange}
           />
            <Input
-            label="Water(g)"
-            id="water"
+            label="sodium(g)"
+            id="sodium"
             value={formData.sodium}
             onChange={handleInputChange}
           />
            <Input
-            label="Water(g)"
-            id="water"
+            label="sugars(g)"
+            id="sugars"
             value={formData.sugars}
             onChange={handleInputChange}
           />
