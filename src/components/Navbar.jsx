@@ -17,9 +17,9 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <Link
-          className="font-weight-bold navbar-brand"
+          className="custom-link font-weight-bold nav-link navbar-brand"
           to={"/"}
-          style={{ color: "black" }}
+          
         >
           Convex
         </Link>
