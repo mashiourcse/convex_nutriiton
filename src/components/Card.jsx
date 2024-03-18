@@ -36,7 +36,11 @@ export const Card = ({ SingleFoodData, index }) => {
         // console.log(`${key}: ${value}`);
         labels.push(key);
         data.push(value);
-      }
+        // if(value!==-1)
+        //   data.push(value);
+        // else
+        //   data.push(0);
+        }
     }
     setLabels(labels);
     setData(data);
