@@ -4,13 +4,13 @@ import { useNutritionContext } from "../../Context/NutritionContext";
 const Input = ({ label, id, value, onChange }) => {
   return (
     <div className="form-group row">
-      <div className="col-sm-6 col-form-label">
+      <div className="col-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-form-label">
         <label htmlFor={id}>{label}</label>
       </div>
-      <div className="col-sm-2 col-form-label">
+      <div className="col-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-form-label">
         <span>{">="}</span>
       </div>
-      <div className="col-sm-4 row">
+      <div className="col-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-form-label row">
         <input
           type="number"
           className="col-sm-8 form-control"
@@ -84,7 +84,7 @@ const NutritionForm = () => {
             onChange={handleInputChange}
           />
           <Input
-            label="carbohydrates(g)"
+            label="carbs(g)"
             id="carbohydrates"
             value={formData.carbohydrates}
             onChange={handleInputChange}
