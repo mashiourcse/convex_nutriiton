@@ -4,11 +4,11 @@ import { useNutritionContext } from "../../Context/NutritionContext";
 const Input = ({ label, id, value, onChange }) => {
   return (
     <div className="form-group row">
-      <div className="col-sm-5 col-form-label">
+      <div className="col-sm-6 col-form-label">
         <label htmlFor={id}>{label}</label>
       </div>
 
-      <div className="col-sm-7 row">
+      <div className="col-sm-6 row">
         <input
           type="number"
           className="col-sm-8 form-control"
@@ -27,15 +27,21 @@ const Input = ({ label, id, value, onChange }) => {
 const NutritionForm = () => {
   const { inputData, setinputData } = useNutritionContext();
 
-  console.log(inputData);
+  // console.log(inputData);
 
   const [formData, setFormData] = useState({
-    proteins: "",
-    carbs: "",
-    fats: "",
-    vitamins: "",
-    minerals: "",
-    water: "",
+
+    calories: "0",
+    protein: "0",
+    carbohydrates: "0",
+    cholesterol: "0",
+    fat: "0",
+    fiber: "0",
+    iron: "0",
+    calcium: "0",
+    sodium: "0",
+    sugars: "0",
+
   });
 
   const handleInputChange = (e) => {
@@ -54,8 +60,11 @@ const NutritionForm = () => {
 
   return (
     <div className="card">
-      <div className="card-header">
-        <h2>Nutrition</h2>
+      <div
+        className="card-header"
+        style={{ backgroundColor: "#138496", color: "white" }}
+      >
+        <h2 className="text-center">Nutrition</h2>
       </div>
       <div className="card-body">
         <form>
@@ -66,39 +75,58 @@ const NutritionForm = () => {
             onChange={handleInputChange}
           />
           <Input
-            label="Proteins(g)"
-            id="proteins"
-            value={formData.proteins}
+            label="protein(g)"
+            id="protein"
+            value={formData.protein}
             onChange={handleInputChange}
           />
           <Input
-            label="Carbs(g)"
-            id="carbs"
-            value={formData.carbs}
+            label="carbohydrates(g)"
+            id="carbohydrates"
+            value={formData.carbohydrates}
             onChange={handleInputChange}
           />
           <Input
-            label="Fats(g)"
-            id="fats"
-            value={formData.fats}
+            label="cholesterol(g)"
+            id="cholesterol"
+            value={formData.cholesterol}
             onChange={handleInputChange}
           />
           <Input
-            label="Vitamins(g)"
-            id="vitamins"
-            value={formData.vitamins}
+            label="fat(g)"
+            id="fat"
+            value={formData.fat}
             onChange={handleInputChange}
           />
           <Input
-            label="Minerals(g)"
-            id="minerals"
-            value={formData.minerals}
+            label="fiber(g)"
+            id="fiber"
+            value={formData.fiber}
             onChange={handleInputChange}
           />
           <Input
-            label="Water(g)"
-            id="water"
-            value={formData.water}
+            label="iron(g)"
+            id="iron"
+            value={formData.iron}
+            onChange={handleInputChange}
+          />
+
+          <Input
+            label="calcium(g)"
+            id="calcium"
+            value={formData.calcium}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="sodium(g)"
+            id="sodium"
+            value={formData.sodium}
+            onChange={handleInputChange}
+          />
+          <Input
+            label="sugars(g)"
+            id="sugars"
+            value={formData.sugars}
             onChange={handleInputChange}
           />
 

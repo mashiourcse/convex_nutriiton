@@ -2,14 +2,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { AccordionSection } from './AccordionSection';
-const ProfileCard3 = ({data}) => {
+const ProfileCard3 = ({data,index}) => {
+
+  let borderColor = [
+    "red", "purple", "blue", "orange"
+  ]
   return (
-    <div className="card profile" style={{ width: '20rem' }}>
+    <div className="card profile" style={{ width: '20rem', border: `10px solid ${borderColor[index]}`, margin: "10px"}}>
       <img className="card-img-top" src={data.image} alt="Card image cap" />
       <div className="card-body">
         <div className='name-link'>
             <div>
-            <h5 className="card-title text-center">{data.name}</h5>        
+            <h4 className="card-title text-center font-weight-bold">{data.name}</h4>        
             </div>
             <div>
             <h5 className="card-title text-center">

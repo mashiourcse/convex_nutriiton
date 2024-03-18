@@ -13,7 +13,7 @@ let profileData = [
     index: 11,
     image: mash,
     name: "Mashiour Rahman",
-    goal: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates consequuntur ab beatae commodi in magnam odit labore maiores officiis velit, tenetur doloremque dolor ratione voluptatem! Harum repellendus pariatur reiciendis veniam?",
+    goal: "Becoming a food businessman ",
     expertise: `
     Frontend Developer
     `,
@@ -28,7 +28,7 @@ let profileData = [
     index: 12,
     image: bijon,
     name: "Bijon Talukder",
-    goal: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates consequuntur ab beatae commodi in magnam odit labore maiores officiis velit, tenetur doloremque dolor ratione voluptatem! Harum repellendus pariatur reiciendis veniam?",
+    goal: "Becoming a Backend and Devops Dev & Solving 1000 problems in codeforces",
     expertise: "Fullstack Developer",
     techstack: `
     C | C++ | HTML  CSS | JAVASCRIPT | RESPONSIVE WEB DESIGN | NODE.JS | SQL | JAVA | ANDROID | NOSQL | POSTMAN
@@ -42,7 +42,7 @@ let profileData = [
     index: 13,
     image: joe,
     name: "Joseph Armstrong",
-    goal: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates consequuntur ab beatae commodi in magnam odit labore maiores officiis velit, tenetur doloremque dolor ratione voluptatem! Harum repellendus pariatur reiciendis veniam?",
+    goal: "Calculating Pi",
     expertise: "Backend Developer",
     techstack: `
     C | C++ | JAVA | JAVASCRIPT | REACT | SQL | PYTORCH | TENSORFLOW | CNN | POSTMAN | UNITY | TABLEAU | JUPYTER | WEB SCRAPING | MACHINE LEARNING  
@@ -56,7 +56,7 @@ let profileData = [
     index: 14,
     image: sarah,
     name: "Sarah Armstrong",
-    goal: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates consequuntur ab beatae commodi in magnam odit labore maiores officiis velit, tenetur doloremque dolor ratione voluptatem! Harum repellendus pariatur reiciendis veniam?",
+    goal: "Having a pet turtle",
     expertise: "Data Science",
     techstack: `
     PYTHON | C++ | HTML | JAVASCRIPT | REACT | MACHINE LEARNING
@@ -72,7 +72,7 @@ function About() {
     <div className='about-section row '>
 
       {
-        profileData.map( (data)=> <ProfileCard3 data={data} className="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12"/>)
+        profileData.map( (data,index)=> <ProfileCard3 key={index} index = {index} data={data} className="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12"/>)
       }
       
       

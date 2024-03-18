@@ -17,34 +17,48 @@ export const Card = ({ SingleFoodData, index }) => {
   };
 
   function filterNutritionValue(obj) {
-    const skippedProperties = ['_creationTime', '_id', 'brandOwner', 'calories', 'brandedFoodCategory', 'description', 'name', 'servingSize', 'servingSizeUnit'];  
+    const skippedProperties = [
+      "_creationTime",
+      "_id",
+      "brandOwner",
+      "calories",
+      "brandedFoodCategory",
+      "description",
+      "name",
+      "servingSize",
+      "servingSizeUnit",
+    ];
     let labels = [];
     let data = [];
-  
+
     for (const [key, value] of Object.entries(obj)) {
       if (!skippedProperties.includes(key)) {
-       // console.log(`${key}: ${value}`);
+        // console.log(`${key}: ${value}`);
         labels.push(key);
         data.push(value);
       }
     }
-   setLabels(labels);
-   setData(data);
+    setLabels(labels);
+    setData(data);
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     filterNutritionValue(SingleFoodData);
     setChartRender(true);
-  },[])
-  console.log(SingleFoodData);
+  }, []);
+  // console.log(SingleFoodData);
   return (
     <div id={accordionId} className="accordion">
       <div className="card">
         <div
-          className="card-header d-flex justify-content-between"
+          className="card-header d-flex justify-content-between  btn btn-info"
           id={`heading${index}`}
+          style={{ backgroundColor: "#138496" }}
         >
-          <h2>{"#"} {index+1} {" "} {SingleFoodData?.brandOwner} {" "} {SingleFoodData?.brandedFoodCategory}</h2>
+          <h6>
+            {"#"} {index + 1} {SingleFoodData?.brandOwner}{" "}
+            {SingleFoodData?.brandedFoodCategory}
+          </h6>
           <h2 className="mb-0 ">
             <button
               onClick={changeArrow}
@@ -53,6 +67,7 @@ export const Card = ({ SingleFoodData, index }) => {
               data-target={`#collapse${index}`}
               aria-expanded="true"
               aria-controls={`collapse${index}`}
+              style={{ backgroundColor: "white" }}
             >
               {arrelement}
             </button>
@@ -70,8 +85,9 @@ export const Card = ({ SingleFoodData, index }) => {
               <p className="card-text">
                 {/* Here are the nutrition facts for 1 medium-sized banana (about
                 118 grams): */}
-                {SingleFoodData?.description} {" "}  
-                {" | Serving size: "}{SingleFoodData?.servingSize} {" | Serving Unit: "} {SingleFoodData?.servingSizeUnit}
+                {SingleFoodData?.description} {" | Serving size: "}
+                {SingleFoodData?.servingSize} {" | Serving Unit: "}{" "}
+                {SingleFoodData?.servingSizeUnit}
               </p>
               <div className="row">
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-">
@@ -79,12 +95,14 @@ export const Card = ({ SingleFoodData, index }) => {
                     <li className="list-group-item font-weight-bold">
                       {"CALORIES: "} {SingleFoodData.calories} {"kcal"}
                     </li>
-                    {
-                      labels.map( (name, index)=>{
-                        return <li className="list-group-item">{name}: {data[index]}</li>
-                      })
-                    }
-                    
+                    {labels.map((name, index) => {
+                      return (
+                        <li className="list-group-item" key={index}>
+                          {name}: {data[index]}
+                        </li>
+                      );
+                    })}
+
                     {/* <li className="list-group-item">Saturated Fat: 0.1g</li>
                    <li className="list-group-item">Total Fat: 0.4g</li>
                    <li className="list-group-item">Cholesterol: 0mg</li>
@@ -102,13 +120,9 @@ export const Card = ({ SingleFoodData, index }) => {
                   </ul>
                 </div>
                 <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                {
-                  chartRender && <ChartComponent
-                  labels={labels}
-                  data={data}
-                  
-                />
-                }  
+                  {chartRender && (
+                    <ChartComponent labels={labels} data={data} />
+                  )}
                 </div>
                 {/* <div className="col-sm-4"></div> */}
               </div>
