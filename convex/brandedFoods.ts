@@ -41,7 +41,7 @@ export const get = query({
       .filter((q) => q.gte(q.field("calcium"), calc))
       .filter((q) => q.gte(q.field("sodium"), sod))
       .filter((q) => q.gte(q.field("sugars"), sug))
-      .take(100);
+      .take(25);
   },
 });
 
