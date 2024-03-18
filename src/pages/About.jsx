@@ -45,10 +45,11 @@ let profileData = [
     goal: "My dream is to be a videogame developer and to create the ultimate video game that teaches Math and Computer Science!",
     expertise: "Backend Developer",
     techstack: `
-    C | C++ | JAVA | JAVASCRIPT | REACT | SQL | PYTORCH | TENSORFLOW | CNN | POSTMAN | UNITY | TABLEAU | JUPYTER | WEB SCRAPING | MACHINE LEARNING  
+    PYTHON | C++ | JAVASCRIPT | REACT | FLASK | CONVEX | GIT | HTML | CSS | SQL | C# | UNITY | SQL | C | JAVA | MYSQL | POSTMAN | TABLEAU  
     `,
-    education: "Graduated, CS, UCSB",
-    linkedin: "www.linkedin.com/in/joseph-armstrong-31415926535897932384626",
+    education: "B.S. Computer Science from UCSB",
+    linkedin:
+      "https://www.linkedin.com/in/joseph-armstrong-31415926535897932384626/",
     github: "https://github.com/JosephArmstrong314",
   },
 
