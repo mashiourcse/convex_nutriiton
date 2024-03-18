@@ -78,56 +78,56 @@ const NutritionForm = () => {
             onChange={handleInputChange}
           />
           <Input
-            label="protein(g)"
+            label="protein (g)"
             id="protein"
             value={formData.protein}
             onChange={handleInputChange}
           />
           <Input
-            label="carbs(g)"
+            label="carbs (g)"
             id="carbohydrates"
             value={formData.carbohydrates}
             onChange={handleInputChange}
           />
           <Input
-            label="cholesterol(g)"
+            label="cholesterol (g)"
             id="cholesterol"
             value={formData.cholesterol}
             onChange={handleInputChange}
           />
           <Input
-            label="fat(g)"
+            label="fat (g)"
             id="fat"
             value={formData.fat}
             onChange={handleInputChange}
           />
           <Input
-            label="fiber(g)"
+            label="fiber (g)"
             id="fiber"
             value={formData.fiber}
             onChange={handleInputChange}
           />
           <Input
-            label="iron(g)"
+            label="iron (g)"
             id="iron"
             value={formData.iron}
             onChange={handleInputChange}
           />
 
           <Input
-            label="calcium(g)"
+            label="calcium (g)"
             id="calcium"
             value={formData.calcium}
             onChange={handleInputChange}
           />
           <Input
-            label="sodium(g)"
+            label="sodium (g)"
             id="sodium"
             value={formData.sodium}
             onChange={handleInputChange}
           />
           <Input
-            label="sugars(g)"
+            label="sugars (g)"
             id="sugars"
             value={formData.sugars}
             onChange={handleInputChange}
