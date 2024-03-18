@@ -24,3 +24,7 @@ transition: transform 0.5s ease;
     .facts-card:hover{
         transform: scale(1.05);
     }
+
+    .custom-link{
+        color: black
+    }

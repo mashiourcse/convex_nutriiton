@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -11,35 +11,41 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg bg-body-tertiary fixed-top' style={{backgroundColor: "#9df5c6", color: "black"}}>
-      <div className='container-fluid'>
-        <Link className='font-weight-bold navbar-brand' to={"/"} style={{color: "black"}}>
+    <nav
+      className="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+      style={{ backgroundColor: "#9df5c6", color: "black" }}
+    >
+      <div className="container-fluid">
+        <Link
+          className="font-weight-bold navbar-brand"
+          to={"/"}
+          style={{ color: "black" }}
+        >
           Convex
         </Link>
         <button
-          className='font-weight-bold navbar-toggler font-weight-bold'
-          type='button'
+          className="font-weight-bold navbar-toggler font-weight-bold"
+          type="button"
           onClick={() => setNavbarCollapsed(!navbarCollapsed)}
-          style={{color: "black"}}
+          style={{ color: "black" }}
         >
-          <span className='navbar-toggler-icon'></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div
           className={`collapse navbar-collapse ${
             navbarCollapsed ? "" : "show"
           }`}
-          id='navbarNav'
+          id="navbarNav"
         >
-          <ul className='navbar-nav'>
+          <ul className="navbar-nav">
             <li
               className={`nav-item ${activeNavItem === "home" ? "active" : ""}`}
             >
               {/* <Link to={"/"}>Home</Link> */}
               <Link
-                className='font-weight-bold nav-link'
+                className="custom-link font-weight-bold nav-link"
                 to={"/"}
                 onClick={() => handleNavItemClick("home")}
-                style={{color: "black"}}
               >
                 Home
               </Link>
@@ -50,10 +56,9 @@ const Navbar = () => {
               }`}
             >
               <Link
-                className='font-weight-bold nav-link'
+                className="custom-link font-weight-bold nav-link"
                 to={"/recommendation-system"}
                 onClick={() => handleNavItemClick("recommendation-system")}
-                style={{color: "black"}}
               >
                 Recommendation System
               </Link>
@@ -64,10 +69,9 @@ const Navbar = () => {
               }`}
             >
               <Link
-                className='font-weight-bold nav-link'
+                className="custom-link font-weight-bold nav-link"
                 to={"/about"}
                 onClick={() => handleNavItemClick("about")}
-                style={{color: "black"}}
               >
                 About Us
               </Link>
