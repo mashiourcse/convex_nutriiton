@@ -4,7 +4,7 @@
 
 ### Introduction 
 
-This project was part of a submission to the Convex 2024 Hackathon. As food enthusiasts, our goal was to create a search tool for foods based on nutrition parameters. The [website](https://convex-nutriiton.vercel.app/) features a small summary of nutrition benefits (Left) as well as the search tool itself (Right) with search parameters on the left (for nutrients such as calories, carbs, protein, fiber, etc...) and paginated search results on the right that expand to display a donut chart of the included nutrients for that food. 
+This project was part of a submission to the Convex 2024 Hackathon. As food enthusiasts, our goal was to create a search tool for foods based on nutrition parameters. The [website](https://convex-nutriiton.vercel.app/) features a small summary of nutrition benefits (Left Image) as well as the search tool itself (Right Image) with search parameters on the left (for nutrients such as calories, carbs, protein, fiber, etc...) and paginated search results on the right that expand to display a donut chart of the included nutrients for that food. 
 
 <p> 
   <img src="https://github.com/mashiourcse/convex_nutriiton/blob/master/convex_repo_image_1_resized.png" width=45% height=50% /> 
@@ -41,13 +41,13 @@ This is a Full Stack Web Application using React, Bootstrap, and Chart.js for th
 
 ### Future Plans 
 
-<a name="credits"/>
+<a name="credits"/> 
 
-### Credits
+### Credits 
 
 link to other teammates linked ins, github profiles, and devpost profiles
 
-<a name="other"/>
+<a name="other"/> 
 
 ### Other
 
