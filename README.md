@@ -49,7 +49,7 @@ To use our tool, simply visit the [website](https://convex-nutriiton.vercel.app/
 ## Credits 
 
 | Contributors | GitHub Profile | LinkedIn | DevPost Profile | 
-|---|---|---|---|
+|---|:---:|:---:|:---:|
 | Joseph Armstrong | [GitHub](https://github.com/JosephArmstrong314) | [LinkedIn](https://www.linkedin.com/in/joseph-armstrong-31415926535897932384626/) | [DevPost](https://devpost.com/joeagorn) | 
 | Mashiour Rahman | [GitHub](https://github.com/mashiourcse) | [LinkedIn](https://www.linkedin.com/in/mashiour-rahman-557b6a16b/) | [DevPost](https://devpost.com/mashiourcse) | 
 | Bijon Talukder | [GitHub](https://github.com/BijonTalukder) | [LinkedIn](https://www.linkedin.com/in/bijon-talukder-934879210/) | [DevPost](https://devpost.com/BijonTalukder) | 
