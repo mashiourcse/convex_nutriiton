@@ -66,3 +66,4 @@ To use our tool, simply visit the [website](https://convex-nutriiton.vercel.app/
 | [DevPost Submission](https://devpost.com/software/nutrition-tool-using-usda-dataset) | 
 | [USDA FDC Data](https://fdc.nal.usda.gov/) | 
 | [Convex Website](https://www.convex.dev/) | 
+| [Convex 2024 Hackathon](https://convexhackathon.devpost.com/) | 
